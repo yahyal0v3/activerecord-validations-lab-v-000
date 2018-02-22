@@ -7,9 +7,7 @@ class Post < ActiveRecord::Base
 
   def clickbait
     if title
-      if !title.include?("Won't Believe") && !title.include?("Secret") && !title.include?("Top") && !title.include?("Guess")
-        errors.add(:title, "non-clickbait")
-      end
-    end
+      unless title.match(/Won't Believe | Secret | Top \d+ | Guess/)
+    end 
   end
 end
