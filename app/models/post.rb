@@ -8,6 +8,8 @@ class Post < ActiveRecord::Base
   def clickbait
     if title
       unless title.match(/Won't Believe | Secret | Top \d+ | Guess/)
-    end 
+
+      end
+    end
   end
 end
